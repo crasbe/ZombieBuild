@@ -1,0 +1,5 @@
+# Gitignore for the ZombieBuild project
+
+
+# ignore the contents of the temporary code folder
+code/
