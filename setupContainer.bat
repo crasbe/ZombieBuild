@@ -35,5 +35,6 @@ if not exist code mkdir code
 docker run -t -d --name ZombieContainer --mount type=bind,source=%cd%/code,target=/app zombiebuild:latest 
 
 docker exec -t --workdir /app ZombieContainer sh -c "git clone https://github.com/damienmaguire/Stm32-vcu"
+docker exec -t --workdir /app ZombieContainer sh -c "git clone https://github.com/damienmaguire/Tesla-M3-Bms-Software"
 
 pause
