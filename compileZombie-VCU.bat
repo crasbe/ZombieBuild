@@ -14,7 +14,7 @@ rem Author: crasbe, Tom-evnut
 rem Date: 2023
 
 docker exec -t --workdir /app/Stm32-vcu ZombieContainer sh -c "make clean"
-docker exec -t --workdir /app/Stm32-vcu ZombieContainer sh -c "make get-deps"
+docker exec -t --workdir /app/Stm32-vcu ZombieContainer sh -c "make get-deps TARGETS=stm32/f1"
 docker exec -t --workdir /app/Stm32-vcu ZombieContainer sh -c "make -j4"
 
 pause
