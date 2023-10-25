@@ -1,17 +1,19 @@
 @echo off
+rem ZombieBuild Starting Script
+rem ===========================
 rem
-rem
-rem
-rem
-rem
+rem This script is used to start an existing container. If this container does not exist,
+rem  it should be created with the "setupContainer.bat" script. The start script will
+rem  start an existing container and can be used instead of the Docker Desktop 
+rem  application.
+rem 
+rem Author: crasbe
+rem Date: 2023
 
-echo Stopping the container if it is already running...
+echo Restarting the ZombieContainer...
 echo:
 
-docker stop ZombieContainer
+docker restart ZombieContainer
 
-echo Starting the container...
-echo:
-
-rem docker run -t -d --name ZombieContainer --mount type=bind,source=%cd%/code,target=/app zombiebuild:latest 
-docker start ZombieContainer
+rem Give the user a chance to see the output of docker :)
+pause
