@@ -13,6 +13,17 @@
 
 - If not already installed, install git with the package manager of your distribution.
 
+## Download ZombieBuild
+
+You can either clone the ZombieBuild repository via git (recommended) or download the .zip archive.
+First you nagivate in the command window to the desired location where you want to store ZombieBuild and then execute the following command.
+Git will create a ``zombiebuild-master`` subdirectory.
+```
+git clone https://github.com/crasbe/ZombieBuild.git
+```
+
+Otherwise you can download the repository as a .zip archive and unpack it manually. You can navigate to the green "Code" button above the file list or use this link: https://github.com/crasbe/ZombieBuild/archive/refs/heads/main.zip
+
 ## Setting up the Container
 The "setupContainer" script initiates the setup process and creates a Docker image, from which the Docker container is built.
 
@@ -25,7 +36,7 @@ The "setupContainer" script already starts the container, however after rebootin
 ## Compiling the ZombieVerter/BMS Code
 The setup script initially pulls the GitHub repositories of the ZombieVerter and Tesla Model 3 BMS projects. The code is located in the "code" subfolder, which is bind mounted to the "/app" folder in the Docker container.
 
-For compiling on a Windows host, the "compileZombie-VCU.bat" and "compileZombie-M3BMS.bat" can be used for the ZombieVerter and M3BMS project. For Linux/Unix/MacOSX, the "compileZombie-VCU.sh" and "compileZombie-M3BMS.bat" files should be used.
+For compiling on a Windows host, the "compileZombie-VCU.bat" and "compileZombie-M3BMS.bat" files can be used for the ZombieVerter and M3BMS project. For Linux/Unix/MacOSX, the "compileZombie-VCU.sh" and "compileZombie-M3BMS.bat" files should be used.
 
 The source code itself can be editied with your favourite IDE or editor. The source control is done with git inside of the respective directories in the "code" subfolder.
 
