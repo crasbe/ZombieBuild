@@ -52,7 +52,7 @@ echo ===========================================================================
 echo Starting the container "ZombieContainer"...
 echo:
 
-docker run -t -d --name ZombieContainer --mount type=bind,source=%cd%/code,target=/app zombiebuild:latest 
+docker run -t -d --name ZombieContainer --mount type=bind,source="%cd%/code",target=/app zombiebuild:latest
 
 echo ================================================================================
 echo Cloning the ZombieVerter and Tesla M3 BMS repository from Github...
